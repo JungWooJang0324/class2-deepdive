@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops_deepdive
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devops_deepdive
+  template:
+    metadata:
+      labels:
+        app: devops_deepdive
+    spec:
+      containers:
+      - name: devops_deepdive
+        image: dopestudy/deepdive_jjw:latest
+        ports:
+        - containerPort: 3000
