@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: devops_deepdive
+  name: devops-deepdive
   namespace: default
 spec:
   selector:
-    app: devops_deepdive
+    app: devops-deepdive
   ports:
     - protocol: TCP
       port: 80
